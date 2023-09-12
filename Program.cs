@@ -1,10 +1,19 @@
-﻿namespace advent2015
+﻿using advent2015.solutions;
+using System.Reflection;
+
+namespace advent2015
 {
     internal class Program
     {
+       
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string dataPath = $"..\\..\\..\\input\\";
+            var fileText = File.ReadAllText($"{dataPath}day1.txt");
+
+
+            Console.WriteLine(day1.DetermineSantasEndFloor(fileText));
+            Console.WriteLine(day1.DetermineSantasFirstNegativeFloor(fileText));
         }
     }
 }
