@@ -1,12 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Diagnostics.Metrics;
-using System.Drawing;
+﻿
+using BenchmarkDotNet.Attributes;
 
 namespace advent2015.solutions
 {
@@ -21,6 +14,7 @@ namespace advent2015.solutions
             projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
             
             inputInstructions = File.ReadAllText($"{projectDirectory}\\input\\day1.txt");
+
 
         }
         /* Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - 
@@ -39,6 +33,7 @@ namespace advent2015.solutions
 
         * To what floor do the instructions take Santa?*/
 
+        [Benchmark]
         public int DetermineSantasEndFloor() 
         {
             var upStairs = inputInstructions.Where(c => c == '(');
@@ -60,6 +55,7 @@ namespace advent2015.solutions
 
          * What is the position of the character that causes Santa to first enter the basement?*/
 
+        [Benchmark]
         public int DetermineSantasFirstNegativeFloor()
         {
             int currentFloor = 0;

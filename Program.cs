@@ -1,5 +1,5 @@
 ﻿using advent2015.solutions;
-using System.Reflection;
+using BenchmarkDotNet.Running;
 
 namespace advent2015
 {
@@ -10,9 +10,10 @@ namespace advent2015
         {
             Day1 day1 = new Day1();
 
+            //BenchmarkRunner.Run<Day1>();
 
-            Console.WriteLine(day1.DetermineSantasEndFloor());
-            Console.WriteLine(day1.DetermineSantasFirstNegativeFloor());
+            Console.WriteLine("Day 1 Part 1: " + day1.DetermineSantasEndFloor());
+            Console.WriteLine("Day 1 Part 2: " + day1.DetermineSantasFirstNegativeFloor());
         }
     }
 }
