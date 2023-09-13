@@ -8,8 +8,9 @@ namespace advent2015
        
         static void Main(string[] args)
         {
-            string dataPath = $"..\\..\\..\\input\\";
-            var fileText = File.ReadAllText($"{dataPath}day1.txt");
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            var fileText = File.ReadAllText($"{projectDirectory}\\input\\day1.txt");
 
 
             Console.WriteLine(day1.DetermineSantasEndFloor(fileText));
