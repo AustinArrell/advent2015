@@ -11,12 +11,18 @@ using System.Drawing;
 namespace advent2015.solutions
 {
 
-   
-
-    public static class day1
+    public class Day1
     {
-        
-        
+        private string projectDirectory {get;set;}
+        private string inputInstructions { get; set; }
+
+        public Day1() 
+        {
+            projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            
+            inputInstructions = File.ReadAllText($"{projectDirectory}\\input\\day1.txt");
+
+        }
         /* Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - 
         * the directions he got are a little confusing. He starts on the ground floor (floor 0) and then follows 
         * the instructions one character at a time. An opening parenthesis, (, means he should go up one floor, 
@@ -33,7 +39,7 @@ namespace advent2015.solutions
 
         * To what floor do the instructions take Santa?*/
 
-        public static int DetermineSantasEndFloor(string inputInstructions) 
+        public int DetermineSantasEndFloor() 
         {
             var upStairs = inputInstructions.Where(c => c == '(');
             var downStairs = inputInstructions.Where(c => c == ')');
@@ -54,7 +60,7 @@ namespace advent2015.solutions
 
          * What is the position of the character that causes Santa to first enter the basement?*/
 
-        public static int DetermineSantasFirstNegativeFloor(string inputInstructions)
+        public int DetermineSantasFirstNegativeFloor()
         {
             int currentFloor = 0;
             int finalPosition = 0;

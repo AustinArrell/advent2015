@@ -8,13 +8,11 @@ namespace advent2015
        
         static void Main(string[] args)
         {
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            var fileText = File.ReadAllText($"{projectDirectory}\\input\\day1.txt");
+            Day1 day1 = new Day1();
 
 
-            Console.WriteLine(day1.DetermineSantasEndFloor(fileText));
-            Console.WriteLine(day1.DetermineSantasFirstNegativeFloor(fileText));
+            Console.WriteLine(day1.DetermineSantasEndFloor());
+            Console.WriteLine(day1.DetermineSantasFirstNegativeFloor());
         }
     }
 }
