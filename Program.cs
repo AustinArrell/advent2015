@@ -17,6 +17,7 @@ namespace advent2015
             Console.WriteLine("Day 1 Part 2: " + day1.DetermineSantasFirstNegativeFloor());
             
             Console.WriteLine("Day 2 Part 1: " + day2.calculatePaperInFeet());
+            Console.WriteLine("Day 2 Part 2: " + day2.calculateRibbonInFeet());
         }
     }
 }
