@@ -12,7 +12,7 @@ namespace advent2015
             Day2 day2 = new Day2();
             Day3 day3 = new Day3();
 
-            //BenchmarkRunner.Run<Day1>();
+            //BenchmarkRunner.Run<Day3>();
 
             Console.WriteLine("Day 1 Part 1: " + day1.DetermineSantasEndFloor());
             Console.WriteLine("Day 1 Part 2: " + day1.DetermineSantasFirstNegativeFloor());
@@ -21,6 +21,7 @@ namespace advent2015
             Console.WriteLine("Day 2 Part 2: " + day2.calculateRibbonInFeet());
 
             Console.WriteLine("Day 3 Part 1: " + day3.calculateNumberOfVisitedHouses());
+            Console.WriteLine("Day 3 Part 2: " + day3.calculateNumberOfVisitedHousesRoboMode());
         }
     }
 }
