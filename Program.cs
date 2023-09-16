@@ -10,6 +10,7 @@ namespace advent2015
         {
             Day1 day1 = new Day1();
             Day2 day2 = new Day2();
+            Day3 day3 = new Day3();
 
             //BenchmarkRunner.Run<Day1>();
 
@@ -18,6 +19,8 @@ namespace advent2015
             
             Console.WriteLine("Day 2 Part 1: " + day2.calculatePaperInFeet());
             Console.WriteLine("Day 2 Part 2: " + day2.calculateRibbonInFeet());
+
+            Console.WriteLine("Day 3 Part 1: " + day3.calculateNumberOfVisitedHouses());
         }
     }
 }
