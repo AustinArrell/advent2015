@@ -92,23 +92,17 @@ namespace advent2015.solutions
             {
                 var sides = line.Split('x').Select(side => int.Parse(side));
 
-                List<int> faces = new List<int>();
+                int[] faces = { 0, 0, 0 };
 
                 // Calculate all sides
                 // l w h ========= 0 1 2
                 // [0]*[1]
-                faces.Add(sides.ElementAt(0) * sides.ElementAt(1));
+                faces[0] = (sides.ElementAt(0) * sides.ElementAt(1));
                 // [1]*[2]
-                faces.Add(sides.ElementAt(1) * sides.ElementAt(2));
+                faces[1] = (sides.ElementAt(1) * sides.ElementAt(2));
                 // [2]*[0]
-                faces.Add(sides.ElementAt(2) * sides.ElementAt(0));
+                faces[2] = (sides.ElementAt(2) * sides.ElementAt(0));
 
-                // Calculate total area
-                var totalPaperThisPresent = 0;
-                foreach (var face in faces)
-                {
-                    totalPaperThisPresent += (face * 2);
-                }
                 // Area: A = L*W
                 // Unknown Side: A/L = W
                 // Perimeter: 2*(L+W)
