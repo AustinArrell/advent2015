@@ -13,13 +13,10 @@ namespace advent2015.solutions
 
     public class Day3
     {
-        private string projectDirectory { get; set; }
         private string inputInstructions { get; set; }
 
         public Day3()
         {
-            projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
             inputInstructions = File.ReadAllText($"D:\\dev\\dotNet\\advent2015\\input\\day3.txt");
         }
 
