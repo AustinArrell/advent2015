@@ -17,7 +17,7 @@ namespace advent2015.solutions
 
         public Day3()
         {
-            inputInstructions = File.ReadAllText($"D:\\dev\\dotNet\\advent2015\\input\\day3.txt");
+            inputInstructions = File.ReadAllText($"G:\\dev\\advent2015\\input\\day3.txt");
         }
 
         /*
